@@ -1,0 +1,122 @@
+//para importar usamos:
+@import "reset"; //oq eu criei la vai aparecer aqui tmb fazendo isso ele junta os 2 arquivos em 1 so, mas precisa colocar o _
+//agr q criamos o atalho no mixin, podemos colocar ele dentro do li por exemplo.
+@mixin girar($graus) {
+    transform:rotate($graus);
+    -webkit-transform: rotate($graus);
+    -moz-transform: rotate($graus);
+    -ms-transform:rotate($graus + 30deg); //digamos q no explorer, preciso add mais 30deg, so escrever
+}
+//um ponto muito importante e identificar as hierarquias
+nav {
+    background-color: #eee;
+    height: 100px;
+    //usando o hover dessa forma quando encostar no nav, mudara para vermelho os items do meu menu, q e horrivel mas e so para entendimento.
+    &:hover a {
+        background-color: grey; 
+    }
+    ul { //repare q vou colocar o ul dentro do nav, e consigo fazer essas edicoes igualmente, seguindo essa logica so vai funcionar os ul dentro de nav
+        margin: 0;
+        padding: 0;
+        list-style: none; 
+        li {
+            display: inline-block; //um ao lado do outro
+            @include girar(30deg); //to usando o mixin e pdindo pra ele girar em 30graus,e ira aplicar td aquilo q defini no mixin
+            //esse e o padrao, algumas propriedades mais avancadas, alguns navegadores se comportam de forma de diferente, por isso e importante usar esses atalhos, porem da mt trabalho entao usamos o @mixin
+            //transform: ..;
+            //-webkit-transform: ; //chrome
+            //-moz-transform: ; //mozila
+            //-ms-transform: ; //explorer
+            a { //repare q coloquei o a dentro do li e igual funciona.
+                display: block;
+                background-color: #ccc;
+                padding: 10px;
+                text-decoration: none;
+                color: black;
+                //HOVER, outra opcao seria colocar no nav, vou por outra cor para questao didatica, mas nesse caso terei q especificar que é o a.
+                &:hover {
+                    background-color: #999;
+                    font-weight: bold;
+                }
+            }
+        }
+    }
+}
+//extensao de propriedades: digamos que quero q mude a cor de uma mensagem na div, de acordo com o tipo de msg, para n economizar codigo.
+//ou seja vamos criar um grupo de propriedades 
+//vms criar um fundamento padrao, e ira mudar de acordo com o nome da minha classe que determinar aqui, para n precisar repetir tds essas configuracoes em tds locais, eu crio esse agrupamento, ai jogo onde eu quiser no HTML.
+//se tivesse
+%fundamento-msg {
+    padding: 10px;
+    font-size: 24px;
+    border: 2px solid #ccc;
+    margin: auto;
+    max-width: 500px;
+    margin-top:10px; //descolar do topo
+}
+.msg-info {
+    @extend %fundamento-msg;
+    border-color: #0000ff;
+    color: #0000ff;
+}
+.msg-aviso {
+    @extend %fundamento-msg;
+    border-color: #ff0000 ;
+    color: #ff0000;
+}
+.msg-sucesso {
+    @extend %fundamento-msg;
+    border-color: #00ff00;
+    color: #00ff00;
+}
+//Operacoes matematicas
+%item {
+    background-color: #000;
+    height: 40px;
+    margin-bottom: 5px;
+    color: white;
+}
+//vms transformar esse 50px de item em uma variavel
+$item-width: 50px;
+
+.item { 
+    @extend %item;
+    width: $item-width; // poderia usar a variavel aqui ai ficaria 50px
+}
+.item-duplo {
+    @extend %item;
+    width: $item-width * 2; //100px
+}
+.item-metade {
+    @extend %item;
+    width: $item-width / 2; //25px
+}
+.item-soma {
+    @extend %item;
+    width: $item-width + 2; //52px poderia usar subtracao, msm logica
+}
+
+//if + for 
+%item-padrao {
+    font-size: 14px;
+    border: 1px solid #333;
+    padding: 5px;
+}
+%item-negrito {
+    font-weight: bold;
+}
+%item-normal {
+    font-weight: normal;
+}
+@for $i from 1 through 10 {
+    .item-#{$i} { //precisa ter o tracinho no html
+        @extend %item-padrao;
+        @if $i <= 3 { //podemos criar uma condicional aqui, digamos q quero q fique em negrito do 1 ao 3.
+            @extend %item-negrito;
+        }
+        @else {
+            @extend %item-normal;//como por padrao ele ja fica normal, e desnecessario usar o else.
+        }
+    }
+}
+//apos esse codigo, se tu abrir no css de fato, vera q criara varios items e isso e ruim pro carregamento, como poderiamos melhroar isso, usando o extend para cada %item-normal ou negrito.

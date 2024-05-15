@@ -1,0 +1,90 @@
+body {
+  font-family: arial;
+  font-size: 14px;
+  background-color: #999;
+}
+
+nav {
+  background-color: #eee;
+  height: 100px;
+}
+nav ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+nav ul li {
+  display: inline-block;
+  transform: rotate(30deg);
+  -webkit-transform: rotate(30deg);
+  -moz-transform: rotate(30deg);
+  -ms-transform: rotate(60deg);
+}
+nav ul li a {
+  display: block;
+  background-color: #ccc;
+  padding: 10px;
+  text-decoration: none;
+  color: black;
+}
+
+.msg-sucesso, .msg-aviso, .msg-info {
+  padding: 10px;
+  font-size: 24px;
+  border: 2px solid #ccc;
+  margin: auto;
+  max-width: 500px;
+  margin-top: 10px;
+}
+
+.msg-info {
+  border-color: #0000ff;
+  color: #0000ff;
+}
+
+.msg-aviso {
+  border-color: #ff0000;
+  color: #ff0000;
+}
+
+.msg-sucesso {
+  border-color: #00ff00;
+  color: #00ff00;
+}
+
+.item-soma, .item-metade, .item-duplo, .item {
+  background-color: #000;
+  height: 40px;
+  margin-bottom: 5px;
+  color: white;
+}
+
+.item {
+  width: 50px;
+}
+
+.item-duplo {
+  width: 100px;
+}
+
+.item-metade {
+  width: 25px;
+}
+
+.item-soma {
+  width: 52px;
+}
+
+.item-10, .item-9, .item-8, .item-7, .item-6, .item-5, .item-4, .item-3, .item-2, .item-1 {
+  font-size: 14px;
+  border: 1px solid #333;
+  padding: 5px;
+}
+
+.item-3, .item-2, .item-1 {
+  font-weight: bold;
+}
+
+.item-10, .item-9, .item-8, .item-7, .item-6, .item-5, .item-4 {
+  font-weight: normal;
+}/*# sourceMappingURL=element_group.css.map */
