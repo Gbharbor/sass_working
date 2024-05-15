@@ -1,0 +1,29 @@
+body {
+  font-family: arial;
+  font-size: 14px;
+  background-color: #999;
+}
+
+nav {
+  background-color: #eee;
+  height: 100px;
+}
+nav ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+nav ul li {
+  display: inline-block;
+  transform: rotate(30deg);
+  -webkit-transform: rotate(30deg);
+  -moz-transform: rotate(30deg);
+  -ms-transform: rotate(60deg);
+}
+nav ul li a {
+  display: block;
+  background-color: #ccc;
+  padding: 10px;
+  text-decoration: none;
+  color: black;
+}/*# sourceMappingURL=element_group.css.map */

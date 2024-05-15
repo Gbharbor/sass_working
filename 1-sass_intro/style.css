@@ -1,0 +1,18 @@
+body {
+  background-color: #eee;
+  color: #333;
+}
+
+.quadrado {
+  width: 100px;
+  height: 100px;
+  border: 2px solid #000;
+  background-color: green;
+}
+
+.retangulo {
+  width: 200px;
+  height: 100px;
+  border: 2px solid #000;
+  background-color: green;
+}/*# sourceMappingURL=style.css.map */
