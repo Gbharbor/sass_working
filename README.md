@@ -126,8 +126,3 @@ The easiest way to deploy this application is using [Vercel](https://vercel.com)
 Follow the [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for detailed instructions.
 
 ---
-
-## 📝 License
-
-This project is for educational purposes, focusing on learning React.js, Next.js, and Sass integration.
-```

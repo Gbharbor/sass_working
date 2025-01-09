@@ -1,32 +1,46 @@
-// Criando o componente Page
-function Page() {
-    // O componente retorna um único elemento (no caso, uma div com h1 e h3 dentro dela)
+// Importando os componentes Square e Circle de uma forma organizada e explicativa
+// Aqui, Square foi importado como um componente default, podendo ser renomeado, e Circle foi importado de forma específica.
+// Isso permite flexibilidade no uso e organização dos componentes dentro do projeto.
+import Square, { Circle } from '@/components/geo';
+
+// Criando o componente Page como uma arrow function
+const Page = () => {
+    // O componente retorna um único elemento (no caso, uma div com outros elementos dentro dela)
     return (
         <div>
+            {/* Cabeçalho principal com classe Tailwind CSS para estilização */}
             <h1 className="font-bold text-2xl">Hello World</h1>
+
+            {/* Subtítulo para complementar o cabeçalho principal */}
             <h3>Olá, mundo!</h3>
+
+            {/* Renderizando os componentes Square e Circle dentro da página */}
+            <Square />
+            <Circle />
         </div>
     );
-}
+};
 
-// Exportando o componente para que ele seja visível no projeto
+// Exportando o componente para ser usado em outras partes do projeto
+// A exportação default permite que o componente seja importado com um nome à escolha do desenvolvedor
 export default Page;
 
-/*
-Explicações:
-- React exige que o componente retorne um único elemento. Por isso usamos uma <div> como elemento pai.
-- O código parece ser HTML, mas na verdade é JSX (JavaScript XML), usado no React.
-- Para usar Tailwind CSS, substituímos 'class' por 'className'.
-- Se não exportarmos o componente (com export default), ele não será acessível e causará erro ao abrir no navegador.
+/* 
+Explicações adicionais:
 
-//||ARROW FUNCTION OPTION||\\
-const Page = () => {
-       return (
-        <div>
-            <h1 className="font-bold text-2xl">Hello World</h1>
-            <h3>Olá, mundo!</h3>
-        </div>
-    );
-}
-export default Page;
+1. JSX (JavaScript XML):
+   - O código dentro da função parece HTML, mas é JSX, uma sintaxe usada pelo React para criar interfaces de usuário.
+
+2. Retorno único:
+   - React exige que um componente retorne um único elemento pai. Por isso, usamos a <div> para envolver os elementos internos.
+
+3. Tailwind CSS:
+   - Quando usamos Tailwind CSS, a propriedade `class` do HTML é substituída por `className` no JSX.
+
+4. Importações:
+   - Podemos importar componentes de duas formas: default (como Square) e específica (como Circle).
+   - O componente default pode ser renomeado no momento da importação, mas componentes específicos devem manter o nome original.
+
+5. Organização de componentes:
+   - É uma boa prática organizar os componentes e comentários no código para facilitar a leitura e manutenção.
 */
