@@ -1,7 +1,11 @@
 // Importando os componentes Square e Circle de uma forma organizada e explicativa
 // Aqui, Square foi importado como um componente default, podendo ser renomeado, e Circle foi importado de forma específica.
 // Isso permite flexibilidade no uso e organização dos componentes dentro do projeto.
-import Square, { Circle } from '@/components/geo';
+
+//import { Square } from "@/components/square"
+//import { Circle } from "@/components/circle"  
+import { Person } from "@/components/Person";
+//import { GeoForm } from "@/components/geoform";
 
 // Criando o componente Page como uma arrow function
 const Page = () => {
@@ -15,9 +19,12 @@ const Page = () => {
             <h3>Olá, mundo!</h3>
 
             {/* Renderizando os componentes Square e Circle dentro da página */}
-            <Square />
-            <Circle />
-        </div>
+            {/* Renderizando os componentes GeoForm, tirando a necessidade de usar o Square e cirle.*/}
+            {/*<GeoForm />*/} 
+            {/*<Square />*/} 
+            {/*<Circle />*/} 
+            <Person/>
+           </div>
     );
 };
 
