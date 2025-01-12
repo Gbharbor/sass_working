@@ -4,8 +4,9 @@
 
 //import { Square } from "@/components/square"
 //import { Circle } from "@/components/circle"  
-import { Person } from "@/components/Person";
+//import { Person } from "@/components/Person";
 //import { GeoForm } from "@/components/geoform";
+import {Card} from "@/components/card";
 
 // Criando o componente Page como uma arrow function
 const Page = () => {
@@ -23,8 +24,22 @@ const Page = () => {
             {/*<GeoForm />*/} 
             {/*<Square />*/} 
             {/*<Circle />*/} 
-            <Person/>
-           </div>
+            {/*<Person
+               name = "Elon musk"
+               avatar="dasda.com"
+               roles={["CEO1","ceo space"]}
+            />  
+            <Person
+               name = "Elon musk"
+               avatar="dasda.com"
+               roles={["CEO1","ceo space"]}
+            /> */}
+            
+               <h1 className="text-3xl font-bolt italic">Frase de efeito</h1>
+               <p className="text-right text-sm">Autor Desconhecido</p>
+               <Card phrase="Alguma frase top" author="Coach de milhoes" /> 
+            
+        </div>           
     );
 };
 
