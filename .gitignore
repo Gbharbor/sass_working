@@ -35,7 +35,7 @@ yarn-error.log*
 # TypeScript
 *.tsbuildinfo
 next-env.d.ts
-aulas.ts
+aulas.txt
 
 # Editor and system
 .DS_Store

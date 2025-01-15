@@ -12,4 +12,4 @@ export const GeoForm = () => {
             </div>
         </div>
     )
-}
+};
