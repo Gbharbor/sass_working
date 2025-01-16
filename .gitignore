@@ -36,6 +36,8 @@ yarn-error.log*
 *.tsbuildinfo
 next-env.d.ts
 aulas.txt
+mod1_2.txt
+mod2.txt
 
 # Editor and system
 .DS_Store

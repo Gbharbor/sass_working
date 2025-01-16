@@ -1,0 +1,3 @@
+type GreetingProps ={
+    hour: number;
+}

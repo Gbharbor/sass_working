@@ -1,24 +1,15 @@
-const getWeekday = (today:Date) => {
-    return new Intl.DateTimeFormat('pt-BR', {weekday:'long'}).format(today);
+import React from 'react';
+import { PersonProps } from '@/types/PersonProps';
+
+const getWeekday = (today: Date) => {
+    return new Intl.DateTimeFormat('pt-BR', { weekday: 'long' }).format(today);
 };
-type Props = {
-    name: string;
-    avatar: string;
-    roles: string[];
-    adress?: string;
-}
 
-export const Person = ({name, avatar='urldimagempadrao', roles}: Props) => {
-    //const name: string = 'Elon Musk';
-    //const avatar: string = 'urlqualquer.jpg'
-    //const today: Date = new Date();
+export const Person = ({ name, avatar = 'urldimagempadrao', roles }: PersonProps) => {
+    const today: Date = new Date();
+    const weekday = getWeekday(today);
 
-    //const data = {
-    //    roles: ['CEO tesla','CEO SpaceX']
-    //}
-    //const { name, avatar, roles} = props;
     return (
-
         <div className="p-3">
             <h1>{name}</h1>
             <img 
@@ -27,9 +18,11 @@ export const Person = ({name, avatar='urldimagempadrao', roles}: Props) => {
                 className="w-40"
             />
             <ul>
-                <li>{roles[0]}</li>
-                <li>{roles[1]}</li>
+                {roles.map((role, index) => (
+                    <li key={index}>{role}</li> 
+                ))}
             </ul>
+            <p>Hoje é {weekday}</p>
         </div>
     );
 };

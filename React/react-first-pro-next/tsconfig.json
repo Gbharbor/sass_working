@@ -12,6 +12,7 @@
     "resolveJsonModule": true,
     "isolatedModules": true,
     "jsx": "preserve",
+    //"jsx": "react-jsx", dessa forma n e preciso do import react msm em porjetos sem um framework como o next.js
     "incremental": true,
     "plugins": [
       {
