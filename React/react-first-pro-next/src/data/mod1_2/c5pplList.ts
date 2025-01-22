@@ -1,4 +1,4 @@
-import {Person} from '@/types/PersonData'
+import {Person} from '@/types/mod1/c5PersonData'
 export const peopleList: Person[] = [
     {id: 1, name: 'Fulano', profession: 'mathematician'},
     {id: 2, name: 'Fulano0', profession: 'mathematician0'},

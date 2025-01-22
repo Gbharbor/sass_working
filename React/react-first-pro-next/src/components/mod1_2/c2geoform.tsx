@@ -1,5 +1,5 @@
-import { Square } from './Square'
-import { Circle } from './Circle'
+import { Square } from './c2Square'
+import { Circle } from './c2Circle'
 
 export const GeoForm = () => {
     return (

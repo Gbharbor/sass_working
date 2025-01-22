@@ -1,5 +1,5 @@
 "use client"
-import { CustumButton } from "@/components/Custumbutton";
+import { CustumButton } from "@/components/mod3/c3CustumButton";
 
 const Page = () => {
    const handleButton1 = () => alert('clicou no botao 1');

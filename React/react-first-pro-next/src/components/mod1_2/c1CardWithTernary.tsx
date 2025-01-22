@@ -1,5 +1,5 @@
 import React from 'react'
-import { CardProps } from "@/types/CardProps";
+import { CardProps } from "@/types/mod1/c1CardProps";
 export const CardWithTernary =({phrase, author}:CardProps) => {
     return (
         <div className='w-96 border p-4'> 

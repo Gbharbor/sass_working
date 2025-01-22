@@ -1,5 +1,5 @@
 import React from 'react';
-import { PersonProps } from '@/types/PersonProps';
+import { PersonProps } from '@/types/mod1/c3PersonProps';
 
 const getWeekday = (today: Date) => {
     return new Intl.DateTimeFormat('pt-BR', { weekday: 'long' }).format(today);
