@@ -1,6 +1,5 @@
 import { Square } from './c2Square'
 import { Circle } from './c2Circle'
-
 export const GeoForm = () => {
     return (
         <div>

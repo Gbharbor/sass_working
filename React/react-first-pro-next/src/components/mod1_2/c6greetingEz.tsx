@@ -7,7 +7,6 @@ const Greeting = ({ hour }: GreetingProps) => {
     } else if (hour >= 18 && hour <= 23) {
       greeting = 'Good Evening';
     }
-    
     return <div className="text-5xl font-bold">{greeting}</div>;
   };
-  export default Greeting;  
+export default Greeting;  

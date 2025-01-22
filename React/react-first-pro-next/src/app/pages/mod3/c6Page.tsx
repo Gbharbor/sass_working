@@ -1,20 +1,16 @@
 "use client";
 import { useState } from "react";
-
 const Page = () => {
   // Estado para o primeiro exemplo, que inicia com 0
   const [count, setCount] = useState<number>(0);
-
   // Função para incrementar count por 1
   const handleIncrement = () => {
     setCount(count + 1);
   };
-
   // Função para definir count como 50
   const handleSetToFifty = () => {
     setCount(50);
   };
-
   return (
     <div className="w-screen h-screen flex justify-center items-center">
       {/* Exibe o valor atual de count */}
@@ -38,7 +34,6 @@ const Page = () => {
     </div>
   );
 };
-
 export default Page;
 /*
 ==========================================================

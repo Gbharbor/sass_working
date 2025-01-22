@@ -4,11 +4,9 @@ const Home = () => {
     return (
         <div>
             <h1>Bem-vindo à página inicial</h1>
-            
             <Card>
                 <p>Este é o conteúdo dentro do primeiro Card.</p>
             </Card>
-
             <Card>
                 <ul>
                     <li>Item 1</li>

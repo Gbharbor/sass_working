@@ -1,9 +1,7 @@
 import React from 'react';
-
 type CardProps = {
     children: React.ReactNode;
 };
-
 const Card = ({ children }: CardProps) => {
     return (
         <div className="card p-4 border rounded-lg">
@@ -12,5 +10,4 @@ const Card = ({ children }: CardProps) => {
         </div>
     );
 };
-
 export default Card;

@@ -1,6 +1,5 @@
 "use client";
 import { useState } from "react";
-
 const Page = () => {
   // Estado para controlar a visibilidade da área secreta
   const [showSecret, setShowSecret] = useState(false);
@@ -9,7 +8,6 @@ const Page = () => {
   const handleClickButton = () => {
     setShowSecret(!showSecret);
   };
-
   return (
     <div className="w-screen h-screen flex justify-center items-center">
       {/* Botão para alternar a visibilidade da área secreta */}
@@ -19,7 +17,6 @@ const Page = () => {
       >
         {showSecret ? 'Ocultar Área Secreta' : 'Mostrar Área Secreta'}
       </button>
-
       {/* Condicional para exibir a área secreta, caso showSecret seja true */}
       {showSecret && (
         <div className="p-3 bg-blue-300 rounded-md mt-3">

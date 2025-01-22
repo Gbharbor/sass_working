@@ -1,5 +1,4 @@
 import { useState } from 'react';
-
 function Counter() {
   const [count, setCount] = useState(0); // Inicializa o state com 0
   return (
@@ -9,7 +8,6 @@ function Counter() {
     </div>
   );
 }
-
 export default Counter;
 /*
 =========================================================

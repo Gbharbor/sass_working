@@ -1,5 +1,4 @@
 import { Student } from "@/types/mod1/c9Student";
-
 export const students: Student[] = [
     {
         id: 1,

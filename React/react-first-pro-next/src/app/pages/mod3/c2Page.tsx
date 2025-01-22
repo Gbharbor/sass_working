@@ -1,16 +1,13 @@
 "use client"; 
-
 const Page = () => {
 // Exemplo 1: Função simples para o botão
 const handleClick = () => {
     alert('worked it!');
   };
-
   // Exemplo 2: Função com parâmetro
   const avisar = (msg: string) => {
     alert(msg);
   };
-
   return (
     <div className="w-screen h-screen flex justify-center items-center space-x-4">
       {/* Erro: A função handleClick é chamada imediatamente durante a renderização 
