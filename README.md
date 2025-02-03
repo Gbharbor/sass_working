@@ -1,6 +1,6 @@
 # Repositório de Estudo - React.js, Next.js e Sass
 
-Este repositório é um estudo sobre **React.js**, **Next.js** e **Sass**, com foco na aplicação dessas três abordagens para criação de uma aplicação web moderna e bem estilizada.
+Este repositório é um estudo sobre **React.js**, **Next.js** e **Sass**, com foco na aplicação dessas três abordagens para criação de uma aplicação web moderna.
 
 ---
 
