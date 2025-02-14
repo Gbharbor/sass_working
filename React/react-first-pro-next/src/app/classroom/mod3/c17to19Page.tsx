@@ -1,8 +1,8 @@
 "use client"
 
-import { Modal } from "@/components/mod3/c17,18&19Modal";
-import { PhotoItem } from "@/components/mod3/c17,18&19PhotoItem";
-import { photoList } from "@/data/mod3/c17,18&19photoList";
+import { Modal } from "@/components/mod3/c17to19Modal";
+import { PhotoItem } from "@/components/mod3/c17to19PhotoItem";
+import { photoList } from "@/data/mod3/c17to19photoList";
 import { useState } from "react";
 
 const Page = () => {

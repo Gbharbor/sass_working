@@ -1,4 +1,4 @@
-import { Photo } from "@/types/mod3/c17,18&19"
+import { Photo } from "@/types/mod3/c17to19"
 export type Props = {
     photo: Photo;
     onClick: () => void;

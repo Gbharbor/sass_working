@@ -1,5 +1,5 @@
 "use client"
-import { TodoItem } from "@/types/mod3/c12,13,14&15";
+import { TodoItem } from "@/types/mod3/c12to15";
 import { useState } from "react";
 
 const Page = () => {

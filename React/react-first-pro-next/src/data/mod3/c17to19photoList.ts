@@ -1,4 +1,4 @@
-import { Photo } from "@/types/mod3/c17,18&19";
+import { Photo } from "@/types/mod3/c17to19";
 export const photoList: Photo[] = [
     {id: 1, url: '1.jpg'},
     {id: 2, url: '2.jpg'},
